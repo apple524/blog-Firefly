@@ -51,6 +51,20 @@ draft: false
 | `slug`        | 自定义文章 URL 路径。如果不设置，将使用文件名作为 URL。                                                                                                                                              |
 | `password`    | 文章密码。设置后文章内容将被 AES-256-GCM 加密，访客需输入密码才能查看。                                                                                                                              |
 | `passwordHint`| 密码提示。显示在密码输入框上方，帮助访客回忆密码，也可以不加。                                                                                                                                                    |
+| `resources`   | 文章末尾显示的资源下载列表，按分类组织；每项支持 `name`、`url` 和可选的提取码 `code`。                                                                                                                         |
+
+`resources` 示例：
+
+```yaml
+resources:
+    - category: 网盘下载
+        items:
+            - name: 百度网盘
+                url: https://pan.baidu.com/s/xxxxx
+                code: abcd
+            - name: 夸克网盘
+                url: https://pan.quark.cn/s/xxxxx
+```
 
 ## 文章文件的放置位置
 

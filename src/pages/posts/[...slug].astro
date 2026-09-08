@@ -46,6 +46,7 @@ import {
 	toAbsoluteUrl,
 } from "@/utils/schema-utils";
 import { url } from "@/utils/url-utils";
+import Resources from "@/components/Resources.astro";
 
 const showSponsorButton =
 	sponsorConfig.showButtonInPost && siteConfig.pages.sponsor;
@@ -431,7 +432,7 @@ const seriesData = await getSeriesPosts(entry);
           <Markdown class="mb-6 markdown-content onload-animation">
             <Content />
           </Markdown>
-
+          <Resources resources={entry.data.resources} />
           {/* 打赏按钮 & 分享按钮 */}
           {
             showPostActionCard && (
@@ -521,7 +522,7 @@ const seriesData = await getSeriesPosts(entry);
           <Markdown class="mb-6 markdown-content onload-animation">
             <Content />
           </Markdown>
-
+          <Resources resources={entry.data.resources} />
           {/* 打赏按钮 & 分享按钮 */}
           {
             showPostActionCard && (

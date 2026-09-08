@@ -1,0 +1,202 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface ResourceItem {
+  name: string;
+  url: string;
+  code?: string;
+}
+
+interface ResourceGroup {
+  category: string;
+  items: ResourceItem[];
+}
+
+interface Props {
+  resources?: ResourceGroup[];
+  title?: string;
+}
+
+const {
+  resources = [],
+  title = '资源下载',
+} = Astro.props;
+
+const validResources = resources.filter(
+  (group) =>
+    group &&
+    group.category &&
+    Array.isArray(group.items) &&
+    group.items.length > 0
+);
+---
+
+{validResources.length > 0 && (
+  <section class="sakura-post-resources" aria-label={title}>
+    <style>
+      .sakura-post-resources {
+        margin: 32px 0 24px;
+        overflow: hidden;
+        background: color-mix(in srgb, var(--primary) 8%, var(--card-bg));
+        border: 1px solid color-mix(in srgb, var(--primary) 28%, var(--line-color));
+        border-radius: var(--radius-large);
+        box-shadow: 0 8px 24px color-mix(in srgb, var(--primary) 10%, transparent);
+      }
+
+      .sakura-post-resources__title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 10px 18px;
+        color: color-mix(in srgb, var(--primary) 88%, var(--deep-text));
+        background: color-mix(in srgb, var(--primary) 17%, var(--card-bg));
+        border-bottom: 1px solid color-mix(in srgb, var(--primary) 22%, var(--line-color));
+        font-size: 1.05rem;
+        font-weight: 700;
+        box-sizing: border-box;
+      }
+
+      .sakura-post-resources__title-icon {
+        flex: 0 0 auto;
+        color: var(--primary);
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+
+      .sakura-post-resources__groups {
+        display: grid;
+        gap: 10px;
+        padding: 16px 18px 18px;
+      }
+
+      .sakura-post-resources__group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+        align-items: baseline;
+        padding: 12px;
+        background: color-mix(in srgb, var(--card-bg) 72%, transparent);
+        border: 1px solid color-mix(in srgb, var(--primary) 12%, var(--line-color));
+        border-radius: calc(var(--radius-large) / 2);
+      }
+
+      .sakura-post-resources__cat {
+        flex: 0 0 auto;
+        min-width: 84px;
+        color: var(--primary);
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+
+      .sakura-post-resources__list {
+        display: flex;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        gap: 8px 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .sakura-post-resources__item {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .sakura-post-resources__link {
+        display: inline-block;
+        padding: 5px 12px;
+        color: var(--deep-text);
+        background: var(--card-bg);
+        border: 1px solid color-mix(in srgb, var(--primary) 25%, var(--line-color));
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .sakura-post-resources__link:hover {
+        color: var(--btn-content);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .sakura-post-resources__code {
+        color: var(--content-meta);
+        font-size: 0.8rem;
+      }
+
+      .sakura-post-resources__code code {
+        background: color-mix(in srgb, var(--primary) 10%, transparent);
+        padding: 1px 6px;
+        border-radius: 4px;
+      }
+
+      @media (max-width: 640px) {
+        .sakura-post-resources {
+          margin-top: 24px;
+        }
+
+        .sakura-post-resources__title {
+          padding: 10px 14px;
+        }
+
+        .sakura-post-resources__groups {
+          padding: 12px 14px 14px;
+        }
+
+        .sakura-post-resources__group {
+          display: block;
+        }
+
+        .sakura-post-resources__cat {
+          display: block;
+          margin-bottom: 8px;
+        }
+
+        .sakura-post-resources__item {
+          margin-bottom: 4px;
+        }
+      }
+    </style>
+
+    <div class="sakura-post-resources__title">
+      <Icon name="material-symbols:download-rounded" class="sakura-post-resources__title-icon" />
+      <span>{title}</span>
+    </div>
+
+    <div class="sakura-post-resources__groups">
+      {validResources.map((group) => (
+        <div class="sakura-post-resources__group">
+          <span class="sakura-post-resources__cat">
+            {group.category}
+          </span>
+
+          <ul class="sakura-post-resources__list">
+            {group.items.map((item) => (
+              <li class="sakura-post-resources__item">
+                <a
+                  class="sakura-post-resources__link"
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.name}
+                </a>
+
+                {item.code && (
+                  <span class="sakura-post-resources__code">
+                    提取码：
+                    <code>{item.code}</code>
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+)}

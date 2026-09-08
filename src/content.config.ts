@@ -27,6 +27,18 @@ type PostData = {
 	prevSlug: string;
 	nextTitle: string;
 	nextSlug: string;
+	resources: ResourceGroup[];
+};
+
+type ResourceItem = {
+	name: string;
+	url: string;
+	code?: string;
+};
+
+type ResourceGroup = {
+	category: string;
+	items: ResourceItem[];
 };
 
 type DynamicData = {
@@ -62,6 +74,21 @@ const postsCollection: ContentCollection<PostData> = defineCollection({
 		passwordHint: z.string().optional().default(""),
 		series: z.string().optional().default(""),
 		seriesOrder: z.number().optional(),
+		resources: z
+			.array(
+				z.object({
+					category: z.string(),
+					items: z.array(
+						z.object({
+							name: z.string(),
+							url: z.string(),
+							code: z.string().optional(),
+						}),
+					),
+				}),
+			)
+			.optional()
+			.default([]),
 
 		/* For internal use */
 		prevTitle: z.string().default(""),
