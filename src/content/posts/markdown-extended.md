@@ -2,10 +2,11 @@
 title: Markdown 扩展功能
 published: 1970-01-01
 updated: 1970-01-01
+pinned: false
 description: "了解 Firefly 中的 Markdown 功能"
 image: ""
-tags: [演示, 示例, Markdown, Firefly]
-category: "文章示例"
+tags: [教程, 示例, Markdown, Firefly]
+category: 教程
 slug: markdown-extended
 series: "Firefly 功能示例2"
 seriesOrder: 2
