@@ -81,6 +81,13 @@ export const booknavConfig: BooknavGroup[] = [
 				icon: "/favicon/draw.png",
 				weight: 10,
 			},
+			{
+				title: "课程表",
+				url: "https://class.mwifi.top/",
+				desc: "美观实用的课程表",
+				icon: "/favicon/draw.png",
+				weight: 10,
+			},
 		],
 	},
 	{
