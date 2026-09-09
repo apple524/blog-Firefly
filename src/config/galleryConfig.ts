@@ -16,6 +16,14 @@ export const galleryConfig: GalleryConfig = {
 		// passwordHint: 密码提示，设置后在输入密码错误时显示（可选，需配合password使用）
 		// 每添加一个数组项就相当于添加了一个相册，记得在 public/gallery/ 目录下创建对应的子目录并放入图片
 		{
+			id: "wallpaper-2026",
+			name: "壁纸",
+			description: "收集的好看壁纸",
+			location: "壁纸",
+			date: "2026-01-01",
+			tags: ["壁纸"],
+		},
+		{
 			id: "firefly-2026",
 			name: "可爱流萤",
 			description: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
