@@ -119,6 +119,13 @@ export const booknavConfig: BooknavGroup[] = [
 		weight: 80,
 		items: [
 			{
+				title: "IP",
+				url: "https://ip.mwifi.top",
+				desc: "IP 查询、网络诊断",
+				icon: "/favicon/ip.svg",
+				weight: 10,
+			},
+			{
 				title: "TinyPNG",
 				url: "https://tinypng.com",
 				desc: "在线压缩 PNG / JPEG 图片",
