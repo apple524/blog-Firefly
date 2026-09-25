@@ -168,7 +168,33 @@ pinned: false    # 置顶
 comment: true    # 是否允许评论
 ---
 ```
-## ⚙️ 壁纸 gallery
+## ⚙️ 相册 gallery
+1. 配置相册元信息
+在 src/config/galleryConfig.ts 中添加相册：
+
+```
+export const galleryConfig: GalleryConfig = {
+  albums: [
+    {
+      id: "上海-2025",        // 对应 public/gallery/shanghai-2025/ 目录
+      name: "上海之旅",
+      description: "2025年上海旅行记录",
+      location: "上海",
+      date: "2025-04-10",
+      tags: ["旅行", "上海"],
+    },
+  ],
+  columnWidth: 240,
+};
+```
+2. 放入照片
+将照片放到对应目录中：
+
+public/gallery/japan-2025/
+  ├── cover.jpg    ← 自动作为封面（可选）
+  ├── 01.jpg
+  ├── 02.png
+  └── 03.webp
 \public\gallery\
 新建立一个文件夹就是一个壁纸组
 
@@ -223,13 +249,5 @@ location: China # 位置
 
 
 
-
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+详细教程
+https://docs-firefly.cuteleaf.cn/zh/guide/gallery.html
