@@ -9,12 +9,11 @@
 
 
 
+<!--  ::github{repo="CuteLeaf/Firefly"} -->
 
-::github{repo="CuteLeaf/Firefly"}
-
-::github{repo="saicaca/fuwari"}
-
+<!--  ::github{repo="saicaca/fuwari"} -->
 ---
 
 *感谢你的来访！希望在这里能找到对你有用的内容！*
+
 

@@ -1,0 +1,13 @@
+# 每行一个图片 URL，支持 jpg/png/webp/avif/gif后缀
+# # 号开头的行为注释，空行会被忽略
+# 示例：
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Mario%20Kart%208%20DX_wallpaper_03.jpg
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Mario%20Kart%208%20DX_wallpaper_04.jpg
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Super%20Mario%20Maker%202_wallpaper_01.jpg
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Super%20Mario%20Maker%202_wallpaper_02.jpg
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Animal%20Crossing_wallpaper_03.jpg
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Zelda%20BOTW_wallpaper_01.jpg
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Zelda%20BOTW_wallpaper_03.jpg
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Zelda%20BOTW_wallpaper_04.jpg
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Kirby%20Star%20Allies_wallpaper_01.jpg
+https://www.nintendo.com/hk/topics/article/article_img/a_200513_01/Kirby%20Star%20Allies_wallpaper_03.jpg

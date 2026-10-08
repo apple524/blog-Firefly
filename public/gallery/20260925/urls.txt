@@ -1,0 +1,13 @@
+# 每行一个图片 URL，支持 jpg/png/webp/avif/gif后缀
+# # 号开头的行为注释，空行会被忽略
+# 示例：
+https://easyimg.tytus.mobi:16666/i/7c1595c5-24af-4b74-bbb3-fe48d470cfaa.jpg
+https://easyimg.tytus.mobi:16666/i/75e2ffac-1b8e-4c67-9615-5f6acab40043.jpg
+https://easyimg.tytus.mobi:16666/i/1711ab3d-3532-4139-84f0-26039de8d876.jpg
+https://easyimg.tytus.mobi:16666/i/af454216-bbde-4869-9c81-7763a0c281d3.jpg
+https://easyimg.tytus.mobi:16666/i/bdce6f24-102c-4d71-ad56-fbcd2679a4d6.jpg
+https://easyimg.tytus.mobi:16666/i/676bc1f6-4464-43d9-aec1-612fddb803f9.jpg
+https://easyimg.tytus.mobi:16666/i/7aef4201-4e21-4c0a-a821-d5ee31c12a38.jpg
+https://easyimg.tytus.mobi:16666/i/9c85d7de-f946-4804-88d2-fb185419ba4b.jpg
+https://easyimg.tytus.mobi:16666/i/a51a5618-bb5b-4512-acd1-18c879e7c29d.jpg
+https://easyimg.tytus.mobi:16666/i/79c13372-efbe-4385-ad69-2e804c41e7ab.jpg

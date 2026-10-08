@@ -85,7 +85,7 @@ export const booknavConfig: BooknavGroup[] = [
 				title: "课程表",
 				url: "https://class.mwifi.top/",
 				desc: "美观实用的课程表",
-				icon: "/favicon/draw.png",
+				icon: "/favicon/class.webp",
 				weight: 10,
 			},
 		],
@@ -118,6 +118,13 @@ export const booknavConfig: BooknavGroup[] = [
 		desc: "顺手的在线小工具",
 		weight: 80,
 		items: [
+			{
+				title: "IP",
+				url: "https://ip.mwifi.top",
+				desc: "IP 查询、网络诊断",
+				icon: "/favicon/ip.svg",
+				weight: 10,
+			},
 			{
 				title: "TinyPNG",
 				url: "https://tinypng.com",
