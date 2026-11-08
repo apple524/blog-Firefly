@@ -6,7 +6,7 @@ description: 一个快递员在浣熊市的生死冒险........
 tags: [电影]
 category: 电影
 image: "https://easyimg.tytus.mobi:16666/i/19ebba40-89ce-4238-860b-42ced8b527a8.jpg"
-slug: TheOdyssey
+slug: ResidentEvil
 series: "电影"
 seriesOrder: 1
 resources:
